@@ -109,7 +109,7 @@
     </section>
 	
     <section id="query-centralized" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized">
-        <h2 property="schema:name" style="margin-top: 40px">SPARQL processing over centralized data</h2>
+        <h2 property="schema:name">SPARQL processing over centralized data</h2>
         <img src="img/sparql-centralized.svg" width="35%" style="float: right" />
 		<ul>
 			<li>
@@ -135,7 +135,7 @@
     </section>
     
     <section id="query-centralized-problems" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized-problems">
-        <h2 property="schema:name" style="margin-top: 40px">Centralization not always possible</h2>
+        <h2 property="schema:name">Centralization not always possible</h2>
         <img src="img/solid-pods.svg" width="35%" style="float: right" />
 		<ul>
 			<li>
@@ -213,12 +213,12 @@
 				<span class="indent">They accept any valid SPARQL query</span>
 			</li>
 			<li>
-				<h3>Client-side source assignment</h3>
-				<span class="indent">Rewrite query in terms of SERVICE clauses</span>
+				<h3>Manual vs. automatic source selection</h3>
+				<span class="indent">Using SERVICE clauses</span>
 			</li>
 		</ul>
         <div>
-        <pre style="font-size: 0.7em; float: left; margin-right: 15px">SELECT ?drug ?title WHERE {
+        <pre style="font-size: 0.65em; float: left; margin-right: 20px">SELECT ?drug ?title WHERE {
   ?drug db:drugCategory dbc:micronutrient.
   ?drug db:casRegistryNumber ?id.
   ?keggDrug rdf:type kegg :Drug.
@@ -227,8 +227,9 @@
 }
 
 
+
 </pre>
-        <pre style="font-size: 0.7em">SELECT ?drug ?title WHERE {
+        <pre style="font-size: 0.65em">SELECT ?drug ?title WHERE {
   SERVICE &lt;http://example.com/drb&gt; {
     ?drug db:drugCategory dbc:micronutrient.
     ?drug db:casRegistryNumber ?id.
@@ -268,7 +269,7 @@
 		<ul>
 			<li>
 				<h3>All federation members must be known before execution starts</h3>
-				<span class="indent">Source assignment distributes query across list of sources</span><br \>
+				<span class="indent">Source selection distributes query across list of sources</span><br \>
                 <span class="indent">No discovery of <em>new</em> sources</span>
 			</li>
 			<li>
@@ -423,10 +424,10 @@
     <section id="shape-index" class="slide" inlist="" rel="schema:hasPart" resource="#shape-index">
       <h2 property="schema:name" style="font-size: 1.9em">Pods exposing <em>shape information</em> allows query engines to skip many links</h2>
       <center>
-		  <img src="img/shapeindex.png" alt="Shape index" style="height: 350px" \>
+		  <img src="img/shapeindex.png" alt="Shape index" style="height: 340px" \>
       </center>
       <ul>
-          <li style="font-size: 0.75em"><em><a href="https://www.semantic-web-journal.net/system/files/swj4106.pdf">Tam, Bryan-Elliott, et al. "Screenshot 2026-09-30 at 14.04.05.png." Semantic Web Journal (2026).</a></em></li>
+          <li style="font-size: 0.75em"><em><a href="https://www.semantic-web-journal.net/system/files/swj4106.pdf">Tam, Bryan-Elliott, et al. "Traveling with a Map: Reducing the Search Space of Link Traversal Queries Using RDF Shapes." Semantic Web Journal (2026).</a></em></li>
       </ul>
     </section>
 	
@@ -489,7 +490,7 @@ using Restart-Based Query Planning." ICWE 2025.</em></li>
         </li>
         <li>
           <img src="img/team/elias-crum.jpg" alt="Elias Crum" />
-          <div><h3>Elias Crum</h3><span>Storing and querying personal genome data in decentralized environments</span></div>
+          <div><h3>Elias Crum</h3><span>Storing and querying personal genome data in decentralized environments <em>(Joint PhD with VITO)</em></span></div>
         </li>
         <li>
           <img src="img/team/jonni-hanski.jpg" alt="Jonni Hanski" />
